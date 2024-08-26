@@ -17,6 +17,7 @@
     <button></button>
   </div> -->
   <div class="wrapper"></div>
+  <!--Didn't get the output-->
 
   <script>
     const socials = [
@@ -45,6 +46,24 @@
         avatar: '../assets/avatar-4.png'
       }
     ];
+    
+
+    const wrapper = document.querySelector('.wrapper');
+    socials.forEach(user =>{
+      let socialWrapper = documnet.createElement('div');
+      socialWrapper.style = 'border: 1px solid black';
+
+      let avatar = document.createElement('img');
+      avatar.src = user.avatar;
+      avatar.alt = user.name;
+
+      let name = document.createElement('h3');
+      name.innerText = user.name;
+      socialWrapper.appendChild(name);
+
+      socialWraper.appendChild(avatar);
+      wrapper.appendChild(socialWrapper);
+    })
 
   </script>
 </body>
